@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <title>Weather</title>
+</head>
+<body>
+<div class="container">
+    <input type="text" id="city" placeholder="Your city...">
+    <button id="get" onclick="getByCity()">Get Weather</button>
+</div>
+<div class="container">
+    <button id="clear" onclick="clearList()">Clear</button>
+    <button id="getByCurrentLoc" onclick="getByLocation()">Get weather from current location</button>
+</div>
+
+<div class="container">
+    <ul id="listOfCity"></ul>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
