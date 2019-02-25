@@ -40,13 +40,12 @@ function addCity(response) {
             errorHandling(response.message);
             return;
         }
-        if(!cityList.some(savedCity => savedCity === response.name)) {
-            updateStorageList(response.name);
-            addCityToDomList(response);
-        } else {
+        if(cityList.some(savedCity => savedCity === response.name)) {
             document.getElementById(response.id) && document.getElementById(response.id).remove();
-            addCityToDomList(response);
+        } else {
+            updateStorageList(response.name);
         }
+        addCityToDomList(response);
     });
 }
 
